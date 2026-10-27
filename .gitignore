@@ -1,0 +1,16 @@
+build/
+.cache/
+*.obj
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.lib
+*.a
+*.zip
+*.msi
+*.img
+*.iso
+.vs/
+.vscode/
+compile_commands.json
