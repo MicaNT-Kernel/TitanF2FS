@@ -358,7 +358,7 @@ public:
         return true;
     }
 
-    static bool FormatVolume(const std::string& path, uint64_t sizeBytes, const std::string& label = "TitanF2FS") {
+    static bool FormatVolume(const std::string& path, uint64_t sizeBytes, const std::string& label = "Flash Storage") {
         constexpr uint32_t BLK_SIZE = F2FS_BLKSIZE;
         constexpr uint32_t BLKS_PER_SEG = F2FS_BLOCKS_PER_SEGMENT; // 512 blocks = 2 MB
         constexpr uint32_t SECTOR_SIZE = 512;
@@ -598,7 +598,7 @@ private:
             wLabel.push_back(static_cast<wchar_t>(sb_.volume_name[i]));
         }
         label_ = std::string(wLabel.begin(), wLabel.end());
-        if (label_.empty()) label_ = "TitanF2FS";
+        if (label_.empty()) label_ = "Flash Storage";
 
         // Read Checkpoint
         uint64_t cpOffset = static_cast<uint64_t>(sb_.cp_blkaddr) * blockSize_;

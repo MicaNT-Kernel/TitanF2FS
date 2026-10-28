@@ -9,7 +9,7 @@ void PrintUsage() {
     std::cout << "Usage: titanf2fs_format <target_device_or_file> [options]\n";
     std::cout << "Options:\n";
     std::cout << "  --size <MB>     Volume size in Megabytes (default: 64 MB)\n";
-    std::cout << "  --label <name>  Filesystem volume label (default: TitanF2FS)\n";
+    std::cout << "  --label <name>  Filesystem volume label (default: Flash Storage)\n";
     std::cout << "  --help          Display this help message\n";
 }
 
@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     }
 
     uint64_t sizeMb = 64;
-    std::string label = "TitanF2FS";
+    std::string label = "Flash Storage";
 
     for (int i = 2; i < argc; ++i) {
         std::string arg = argv[i];
